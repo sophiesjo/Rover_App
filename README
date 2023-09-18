@@ -1,0 +1,17 @@
+Project's Title: Sprout
+
+Project Description: Our mobile application connects users to plant sitters by having sitters fill out 
+information for their profile where they specify their plant expertise and give their phone number and 
+email. After this, their profile will be entered into the home page where users can scroll and search
+for specific sitters and types. Sprout uses Ionic with Angular development, implementing firebase as its database. We faced issues within Firebase Cloud on how to write data to the cloud base. We struggled with navigation for showing a sitter's individual profile and getting data from firebase. Currently, we have the sitter data hard-coded. A feature we hope to implement in the future is a message inbox, which would require tighter security and encoding. This is available in firebase but it is too complex to set up with the time we were given. This would also require permission to send notifications. We also wanted to include a map of sitters nearby, surveys for expertise and types of services, and price ranges.
+
+How to Install and Run the Project: You need to have Visual Studio Code installed. After downloading the source code, unpack the file and run: 
+    npm install -g cordova ionic
+For Macbooks you have to add sudo to the front:
+    sudo install -g cordova ionic
+After that, you can run the application by running:
+    ionic serve --lab
+
+How to Use the Project: The first page you are routed to is the login page. Since you do not have an account yet, it will not let you log in. First, you will need to click on the sign-up link. Here you will have to insert your email address and password. After hitting the register button, go to your email inbox. You should receive an email from firebase in your main inbox or your spam requesting email verification. Once it is verified, you may go back to the login page and log in. Next, you will be rerouted to the home page. Here, you may browse sitter profiles. If you have a specific sitter in mind, or you know what services you are looking for, you can search it up in the search bar. If you do not know what to search for, you can click on the help link, which will give you all the types of services and plant expertises. The second section of the app is the account page. Here, it will display your name, message, email, and phone number. At the bottom, there is a toggle that alerts that you are a plant sitter. When you toggle it, there is a check box that allows you to check the different types of plants you have expertise in. There is a hamburger on the top left. Once clicked, it will show a list of items. You can update user information in the profile, settings contain the application version and acknowledgments, help contains examples of what to search up, and you can also sign out. 
+
+Credits: Sophia Sjogren, Jin Hayashi, and Vien Hang
