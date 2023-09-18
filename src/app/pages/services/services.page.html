@@ -1,0 +1,58 @@
+
+<ion-header>
+  <ion-toolbar color = "dark">
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+  
+
+<ion-content [fullscreen] = "true" class="ion-padding">
+
+
+
+  <ion-searchbar
+    placeholder='Try "Boarding"'
+    search-icon="search-circle"
+    [(ngModel)]="searchTerm"
+    show-clear-button="always" 
+    clear-icon="trash-bin"
+    animated="true"
+    [debounce]="500" 
+    (ionChange)="handleChange($event)"
+    color="light"
+    >
+
+  </ion-searchbar>
+  <div class="help-link">
+    Not sure what to search up? <a routerLink="/help">Help</a>
+ </div>
+  <ion-list class ="bg-transparent">
+    <ion-item color="none" lines="none" *ngFor="let sitter of sitter | filter:searchTerm">
+      <ion-card>
+        <img alt="Silhouette of mountains" [src]= "sitter.photo"> 
+      <ion-card-header>
+        <ion-card-title>
+          <ion-label>{{ sitter.name }}</ion-label>
+        </ion-card-title>
+        <ion-card-subtitle>
+          <ion-label>{{ sitter.services }}</ion-label>
+        </ion-card-subtitle>
+     </ion-card-header>
+     <ion-card-content>
+      <ion-label>{{ sitter.expertise }}</ion-label>
+     </ion-card-content>
+     <!-- <ion-button fill="clear">
+      
+      <ion-item [routerLink]="sitter.pageName">
+        Click to view {{sitter.name}}'s profle
+      </ion-item>
+    
+      </ion-button>
+      --->
+     </ion-card>
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>

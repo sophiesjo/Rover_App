@@ -1,0 +1,23 @@
+
+ion-title{
+    text-align: center;
+    
+}
+
+ion-content {
+    --background: none;
+    background-image: url('../../../assets/images/plant.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.bg-transparent{
+    background: transparent;
+}
+
+.help-link{
+    font-size: 13px;
+    text-align: center;
+    color: rgb(66, 66, 66);
+  }

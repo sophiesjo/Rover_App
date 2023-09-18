@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <header>
+      <h1 class="gradient-text">Sprout</h1>
+    </header>
+  </ion-toolbar>
+</ion-header>
+
+<body>
+  <div class = "wrapper">
+    
+    <form>
+      <div class="title-text">
+        <h2 class="title login">
+           Welcome back!
+        </h2>
+        
+     </div>
+      <h3 class="message">
+        Sign into your account
+      </h3>
+      <ion-item class="box">
+        <ion-input type="text" placeholder="Email Address" #email required></ion-input>
+      </ion-item>
+      <ion-item class ="box">
+        <ion-input type="password" placeholder="Password" #password required></ion-input>
+      </ion-item>
+      <ion-row>
+        <ion-col>
+          <button type="submit" (click)="logIn(email, password)"expand="block" class="button"
+            >Login</button>
+        </ion-col>
+      </ion-row>
+      <!-- <span class="divider line one-line">or</span> -->
+      <ion-row>
+        <ion-col>
+          <!-- <ion-button type="submit" color="danger" (click)="authService.GoogleAuth()"  expand="block">
+            Login with Google
+          </ion-button> -->
+  
+          <div class="signup-link">
+            Don't have an account? <a routerLink="/registration">Sign up</a>
+         </div>
+
+          
+        </ion-col>
+      </ion-row>
+    </form>
+</div>
+</body>
+
+<ion-button type="submit"  routerLink="/home">
+  go to app
+</ion-button>
